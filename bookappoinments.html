@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Book Appoinments</title>
+
+  <!-- This is the Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:300,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./validate.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+      <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.svg" alt="Hospital Logo " height="100">
+        </a>
+      </nav>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- BUTTON - NAV -->
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto float-right">
+
+          <li class="nav-item  btn btn-outline-light mr-4" style="width: 160px;">
+            <a class="nav-link  text-white" href="mentalhealth.html" id="navbarDropdown" role="button"
+               aria-haspopup="true" aria-expanded="false">
+              Mental Health
+            </a>
+          </li>
+
+          <li class="nav-item  btn btn-outline-light mr-4" style="width: 120px;">
+            <a class="nav-link  text-white" href="services.html" id="navbarDropdown" role="button" 
+              aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+          </li>
+
+          <li class="nav-item  btn btn-outline-light mr-4" style="width: 120px;">
+            <a class="nav-link  text-white" href="news.html" id="navbarDropdown" role="button" 
+              aria-haspopup="true" aria-expanded="false">
+              News
+            </a>
+          </li>
+
+          <li class="nav-item  btn btn-outline-light mr-4" style="width: 120px;">
+            <a class="nav-link  text-white" href="about.html" id="navbarDropdown" role="button" 
+              aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+          </li>
+
+          <!-- BUTTON - Language -->
+          <li class="nav-item btn btn-outline-light" style="width: 120px;">
+            <a class="nav-link text-white" href="#">ENG / FR</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </nav>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="services.html">Services</a></li>
+        <li class="breadcrumb-item"><a href="#">Psychiatry</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Book Appointments</li>
+        <li class="breadcrumb-item"><a href="login.php">New Patients</a></li>
+      </ol>
+    </nav>
+
+  </div>
+
+  <div class="container my-5">
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h4>Psychiatry Services Appointment Booking System
+              <a href="index.html" class="btn btn-danger float-right">Cancel</a>
+            </h4>
+          </div>
+          <div class="card-body">
+            <form id ="form" action="/">
+
+              <div class="mb-3">
+                <label>First name</label>
+                <input type="text" id="fname" name="fname" class="form-control" placeholder="Type Your First Name" required>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label>Last name</label>
+                <input type="text" id="lname" name="lname" class="form-control" placeholder="Type Your Last Name" required>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label>Phone</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Type Your Phone Number" required minlength="10" maxlength="10">
+                <div class="error"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="">Desired Date 1</label>
+                <input type="date" id="date1" name="date1" class="form-control" min="today"/>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label for="">Desired Time 1</label>
+                <input type="time" id="time1" name="time1" class="form-control" min="09:00" max="17:00"/>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label for="">Desired Date 2</label>
+                <input type="date" id="date2" name="date2" class="form-control" min="today"/>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label for="">Desired Time 2</label>
+                <input type="time" id="time2" name="time2" class="form-control" min="09:00" max="17:00" />
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label>Email</label>
+                <input type="email" id="email" name="email" class="form-control"placeholder="Type Your Email"/>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label>Address</label>
+                <input type="text" id="address" name="address" class="form-control"placeholder="Type Your Address"/>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label>City</label>
+                <input type="text" id="city"  name="city" class="form-control"placeholder="Type Your City"/>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label>Province</label>
+                <select id="province" name="province" class="form-control">
+                  <option selected>-- Select Province --</option>
+                  <option value="AB">Alberta</option>
+                  <option value="BC">British Columbia</option>
+                  <option value="MB">Manitoba</option>
+                  <option value="NB">New Brunswick</option>
+                  <option value="NL">Newfoundland and Labrador</option>
+                  <option value="NT">Northwest Territories</option>
+                  <option value="NS">Nova Scotia</option>
+                  <option value="NU">Nunavut</option>
+                  <option value="ON">Ontario</option>
+                  <option value="PE">Prince Edward Island</option>
+                  <option value="QC">Quebec</option>
+                  <option value="SK">Saskatchewan</option>
+                  <option value="YT">Yukon</option>
+                </select>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <label>Postal code</label>
+                <input type="text" id="pcode" name="pcode" class="form-control"placeholder="XXX XXX"/>
+                <div class="error"></div>
+              </div>
+              <div class="mb-3">
+                <button type="submit" id="submit" name="submit" class="btn btn-primary">Save Patient</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <!-- This is the Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
